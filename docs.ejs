@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Documentation | Aagenda</title>
+  <%- partial("./_head.ejs") %>
+  <link rel='stylesheet' type='text/css' href='/stylesheets/docs.css'>
+</head>
+
+<body>
+
+  <aside>
+    <%- partial("/partials/_hero") %>
+    <a id='add-to-slack' class="fat-button" href="https://slack.com/oauth/authorize?scope=commands&client_id=2171935826.24060453488">Add to Slack</a>
+  </aside>
+
+  <main>
+    <%- partial("/partials/_docs") %>
+  </main>
+
+  <%- partial("/partials/_footer") %>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aagenda</title>
+  <%- partial("/partials/_head") %>
+  <link rel='stylesheet' type='text/css' href='/stylesheets/main.css'>
+  <script src='https://code.jquery.com/jquery-2.2.1.js' charset='utf-8'></script>
+  <script src='/javascript/vendor/typed.js' charset='utf-8'></script>
+  <script src='/javascript/slack.js' charset='utf-8'></script>
+  <script src="/javascript/desc_animation.js" charset="utf-8"></script>
+</head>
+<body>
+  <section id='hero'>
+    <%- partial("/partials/_hero") %>
+    <div id="button">
+      <a id='add-to-slack' class="fat-button" href="https://slack.com/oauth/authorize?scope=commands&client_id=2171935826.24060453488">Add to Slack</a>
+      <a id='go-to-docs' class="fat-button" href="/docs">Show 'em docs</a>
+    </div>
+    <%- partial("/partials/_slack") %>
+  </section>
+
+  <section id="desc1">
+    <%- partial("/partials/svg/_clipboard1") %>
+    <h2>Get things done without switching windows.</h2>
+  </section>
+
+  <section id="desc2">
+    <h2>List. Lists. Lists?</h2>
+    <%- partial("/partials/svg/_clipboard2") %>
+  </section>
+  <%- partial("/partials/_footer") %>
+</body>
+</html>

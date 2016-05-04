@@ -1,0 +1,223 @@
+// $clipboard-bg: #99641d;
+$slack-green: #000;
+$slack-blue: #eee;
+$slack-yellow: #ccc;
+$slack-pink: #a93030;
+
+$clipboard-bg: $slack-green;
+
+#desc1,
+#desc2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh 0;
+  background: #fafafa;
+  border-top: #ddd 1px solid;
+}
+
+#desc2 {
+  background: #fff;
+}
+
+#desc1 > h2,
+#desc2 > h2 {
+  width: 60vw;
+  max-width: 480px;
+  padding: 0 30px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  #desc1 {
+    flex-direction: column;
+  }
+  #desc2 {
+    flex-direction: column-reverse;
+  }
+  #desc1 > h2,
+  #desc2 > h2 {
+      padding: 5vh 0;
+    }
+}
+
+#desc1 > div,
+#desc2 > div {
+  width:40vw;
+  max-width: 320px;
+}
+
+
+path,
+polygon {
+  stroke:#8b8b8b;
+  stroke-width: 0;
+  fill: none;
+}
+
+#bg {
+  stroke:none;
+  fill: #efefef;
+}
+
+#back {
+  fill: $clipboard-bg;
+}
+
+#front {
+  fill: #fff;
+}
+
+#clip1 {
+  fill: #ccc;
+}
+
+#clip2 {
+  fill: #555;
+}
+
+#hole {
+  fill: #fff;
+}
+
+#text1 > path {
+  fill: $slack-blue;
+}
+
+#text2 > path {
+  fill: $slack-yellow;
+}
+
+#text3 > path {
+  fill: $slack-pink;
+}
+
+.desc1-cool {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+}
+
+.desc1-cool-animate {
+  animation-name: extracool;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.cool {
+  stroke: $slack-blue;
+  stroke-width:10;
+}
+
+@keyframes extracool {
+  from {
+    stroke-dashoffset: 1200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.desc1-supercool {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+}
+
+.desc1-supercool-animate {
+  animation-name: superextracool;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.supercool {
+  stroke: $slack-blue;
+  stroke-width:10;
+}
+
+@keyframes superextracool {
+  from {
+    stroke-dashoffset: 700;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.desc1-superdamncool {
+  stroke-dasharray: 750;
+  stroke-dashoffset: 750;
+}
+
+.desc1-superdamncool-animate {
+  animation-name: superdamnextracool;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.3s;
+}
+
+.superdamncool {
+  stroke: $slack-blue;
+  stroke-width: 20;
+}
+
+@keyframes superdamnextracool {
+  from {
+    stroke-dashoffset: 750;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+g#second > .cool,
+g#second > .superdamncool{
+  stroke: $slack-yellow;
+  animation-delay: 0.8s;
+}
+
+g#third > .cool,
+g#third > .superdamncool{
+  stroke: $slack-pink;
+  animation-delay: 1.2s;
+}
+
+g#second > .supercool{
+  stroke: $slack-yellow;
+  animation-delay: 0.7s;
+}
+
+g#third > .supercool{
+  stroke: $slack-pink;
+  animation-delay: 1.1s;
+}
+
+g.page1-animate {
+  animation-name: wiggle;
+  transform-origin: 50% 0;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  10% {
+    transform: translateY(1px) rotate(-2deg);
+  }
+  20% {
+    transform: translateY(2px) rotate(2deg);
+  }
+  30% {
+    transform: translateY(3px) rotate(-3deg);
+  }
+  40% {
+    transform: translateY(7px) rotate(3deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(1000px);
+  }
+}

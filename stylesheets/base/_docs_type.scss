@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+@import url(https://fonts.googleapis.com/css?family=Fira+Mono:400,700);
+// $success-color: #5ECEA9;
+// $error-color: #E94588;
+$success-color: #A93030;
+$error-color: #A93030;
+$base-font-color: #444;
+
+a,
+h1,
+h2,
+h3 {
+  color: $base-font-color;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: normal;
+}
+
+h3 {
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 30px 0 0 0;
+  color: lighten($base-font-color, 10);
+}
+
+p {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 300;
+  font-family: 'Slabo 27px', serif;
+  color: lighten($base-font-color, 20);
+  margin: 10px 0;
+}
+
+pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  background: #faf8f0;
+  padding: 3px;
+
+  overflow: auto;
+  code {
+    font-family: Courier, monospace;
+    background: none;
+    border: none;
+    padding: 4px 4px;
+  }
+}
+
+code {
+  line-height: 18px;
+  font-family: Courier, monospace;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 4px 4px;
+}

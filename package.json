@@ -1,0 +1,21 @@
+{
+  "name": "aagenda-publicity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "harp": "^0.20.1"
+  },
+  "devDependencies": {},
+    "scripts": {
+        "start": "harp server",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@bitbucket.org/tinkertanker/aagenda-publicity.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "homepage": "https://bitbucket.org/tinkertanker/aagenda-publicity#readme"
+}

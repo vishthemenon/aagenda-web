@@ -1,0 +1,74 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+
+// $success-color: #5ECEA9;
+// $error-color: #E94588;
+$success-color: #A93030;
+$error-color: #A93030;
+
+$base-font-color: #444;
+
+a,
+p,
+h1,
+h2,
+h3 {
+  color: $base-font-color;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3 {
+  width: 50vw;
+
+  @media screen and (max-width: 600px){
+    width: 90vw;
+  }
+}
+
+a:hover {
+  color: darken($base-font-color, 50);
+}
+
+h1 {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 50px;
+
+  &.small {
+    margin-bottom: 10vh;
+    font-size: 35px;
+  }
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  line-height: normal;
+}
+
+.error {
+  color: $error-color;
+  margin-top: 5vh;
+}
+
+.success {
+  color: $success-color;
+  margin-top: 5vh;
+}
+
+h3 {
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 300;
+  color: lighten($base-font-color, 30);
+  margin: 5vh 0 5vh;
+
+  &#try {
+    border-top: 1px solid lighten($base-font-color, 30);
+    padding-top: 5vh;
+    margin: 0;
+  }
+}

@@ -1,0 +1,117 @@
+@import './utils/reset';
+@import './base/docs_type';
+@import './page/footer';
+
+$section-bg: #FFF;
+$font-color: #FFF;
+$font-color-dark: #222;
+$slack-font-color: #000;
+$slack-cmd-font-color: #A93030;
+$slack-cmd2-font-color: #a262a9;
+$slack-background-color-hover: #EEE;
+$btn-background-color: #A93030;
+$btn-background-color-alt: #EEE;
+
+body {
+  display: flex;
+  flex-flow: wrap row;
+}
+
+main {
+  text-align: justify;
+  text-justify: inter-word;
+  width: 70vw;
+  padding: 0 50px;
+  height: 100vh;
+  overflow-y: scroll;
+  @media(max-width: 800px) {
+    height: unset;
+    padding: 0 10px;
+    width: 100vw;
+  }
+}
+#title {
+  margin-top: 30px;
+  @media(max-width:800px) {
+    margin-top: 1rem;
+  }
+}
+
+article {
+  padding: 30px 0;
+}
+
+aside {
+  display: flex;
+  background-color: $section-bg;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap column;
+  padding-bottom: 10vh;
+  width: 30vw;
+  height: 100vh;
+  @media(max-width: 800px) {
+    padding: 20px;
+    height: unset;
+    flex-flow: wrap row;
+    width: 100vw;
+    justify-content: space-between;
+
+    h1 {
+      font-size: 30px;
+      margin: 0;
+    }
+    h2 {
+      display: none;
+    }
+  }
+}
+
+#hero-logo {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  @media(max-width: 800px) {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+  }
+}
+
+#button {
+  height: 100px;
+}
+
+.fat-button {
+  padding: 12px;
+  font-size: 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: top;
+  @media(max-width: 800px) {
+    padding: 8px;
+    font-size: 20px;
+  }
+}
+
+#add-to-slack {
+  color: $font-color;
+  background-color: $btn-background-color;
+  border-bottom: 6px solid darken($btn-background-color, 30);
+  margin-top: 3px;
+
+  &:hover {
+    background-color: darken($btn-background-color, 10);
+    border-bottom: 3px solid darken($btn-background-color, 30);
+    margin-top: 6px;
+  }
+
+  &:active,
+  &:focus {
+    background-color: darken($btn-background-color, 15);
+    border-bottom: 1px solid darken($btn-background-color, 30);
+    margin-top: 8px;
+  }
+}
