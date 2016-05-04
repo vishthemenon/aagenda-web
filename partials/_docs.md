@@ -19,12 +19,13 @@ Rationale: Tags was originally designed to allow for todos to transcend across c
 ### Without tags: `/aa add`
 
 Add an item. This item belongs to the channel in which the command is typed.
-<pre>
+
+```
 /aa add this goes into my todo list
 New item added:
 @your-handle
 this goes into my todo list
-</pre>
+```
 
 ### /aa list foo
 

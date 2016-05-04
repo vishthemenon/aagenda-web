@@ -1,7 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
 
-// $success-color: #5ECEA9;
-// $error-color: #E94588;
 $success-color: #A93030;
 $error-color: #A93030;
 
@@ -45,6 +43,7 @@ h1 {
 h2 {
   text-align: center;
   font-size: 30px;
+  font-weight: 400;
   line-height: normal;
 }
 

@@ -1,13 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Slabo+27px);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
-@import url(https://fonts.googleapis.com/css?family=Fira+Mono:400,700);
-// $success-color: #5ECEA9;
-// $error-color: #E94588;
-$success-color: #A93030;
-$error-color: #A93030;
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,500,700,900);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,600);
+
 $base-font-color: #444;
 
 a,
+p,
+li,
 h1,
 h2,
 h3 {
@@ -19,26 +17,30 @@ h3 {
 h1 {
   margin-bottom: 10px;
   font-size: 50px;
+  &#title {
+    font-weight: 500;
+    font-size: 35px;
+  }
 }
 
 h2 {
   font-size: 30px;
   line-height: normal;
+  font-weight: 400;
 }
 
 h3 {
-  font-style: italic;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 400;
   margin: 30px 0 0 0;
   color: lighten($base-font-color, 10);
 }
 
-p {
+p,
+li {
   font-size: 18px;
   line-height: 22px;
   font-weight: 300;
-  font-family: 'Slabo 27px', serif;
   color: lighten($base-font-color, 20);
   margin: 10px 0;
 }
@@ -48,21 +50,22 @@ pre {
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap;
   background: #faf8f0;
-  padding: 3px;
+  padding: 10px;
+  border-radius: 7px;
 
   overflow: auto;
   code {
-    font-family: Courier, monospace;
+    font-family: 'Source Code Pro', Courier, monospace;
     background: none;
     border: none;
-    padding: 4px 4px;
+    padding: 4px;
   }
 }
 
 code {
-  line-height: 18px;
-  font-family: Courier, monospace;
+  font-family: 'Source Code Pro', Courier, monospace;
+  font-size: 15px;
   background-color: #eee;
-  border: 1px solid #ccc;
-  padding: 4px 4px;
+  border-radius: 5px;
+  padding: 1px 6px 4px;
 }

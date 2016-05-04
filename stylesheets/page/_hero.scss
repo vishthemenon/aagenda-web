@@ -43,6 +43,7 @@ section#hero {
 .fat-button {
   padding: 12px;
   font-size: 25px;
+  font-weight: 400;
   border-radius: 10px;
   text-decoration: none;
   margin-top: 20px;
@@ -71,6 +72,7 @@ section#hero {
 }
 
 #go-to-docs {
+  font-weight: 300;
   color: $font-color-dark;
   background-color: $btn-background-color-alt;
   border-bottom: 6px solid darken($btn-background-color-alt, 30);

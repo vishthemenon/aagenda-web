@@ -1,8 +1,8 @@
 @import './utils/reset';
 @import './base/docs_type';
-@import './page/footer';
 
 $section-bg: #FFF;
+$sidebar-bg: #F3F3F3;
 $font-color: #FFF;
 $font-color-dark: #222;
 $slack-font-color: #000;
@@ -30,28 +30,26 @@ main {
     width: 100vw;
   }
 }
-#title {
-  margin-top: 30px;
-  @media(max-width:800px) {
-    margin-top: 1rem;
-  }
-}
 
 article {
   padding: 30px 0;
 }
 
 aside {
+  padding-top: 20px;
   display: flex;
-  background-color: $section-bg;
+  background-color: $sidebar-bg;
+  border-right: 1px solid darken($sidebar-bg, 7);
   text-align: center;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-flow: wrap column;
-  padding-bottom: 10vh;
   width: 30vw;
+  max-width: 300px;
   height: 100vh;
+  overflow-y: scroll;
   @media(max-width: 800px) {
+    background: $section-bg;
     padding: 20px;
     height: unset;
     flex-flow: wrap row;
@@ -68,10 +66,26 @@ aside {
   }
 }
 
+#toc {
+  margin-top: 30px;
+  width: 100%;
+  @media(max-width: 800px) {
+    display: none;
+  }
+  li {
+    line-height: 50px;
+    background: lighten($sidebar-bg, 10);
+    margin: 0;
+    border-top: 1px solid darken($sidebar-bg, 10);
+    :last-child{
+      border-bottom: 1px solid darken($sidebar-bg, 10);
+    }
+  }
+}
+
 #hero-logo {
-  width: 200px;
-  height: 200px;
-  margin: 20px auto;
+  width: 100px;
+  height: 100px;
   @media(max-width: 800px) {
     width: 50px;
     height: 50px;
@@ -84,16 +98,13 @@ aside {
 }
 
 .fat-button {
-  padding: 12px;
-  font-size: 25px;
+  font-weight: 400;
   border-radius: 5px;
   text-decoration: none;
   display: inline-block;
   vertical-align: top;
-  @media(max-width: 800px) {
-    padding: 8px;
-    font-size: 20px;
-  }
+  padding: 8px;
+  font-size: 20px;
 }
 
 #add-to-slack {
