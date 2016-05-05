@@ -2,10 +2,14 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,600);
 
 $base-font-color: #444;
-$hover-color: #A93030;
+$section-bg: #FFF;
+$alert-color: #A93030;
+
 
 
 a,
+th,
+td,
 p,
 li,
 h1,
@@ -14,6 +18,10 @@ h3 {
   color: $base-font-color;
   font-family: 'Lato', sans-serif;
   font-weight: 600;
+}
+
+em {
+  font-style: italic;
 }
 
 h1 {
@@ -27,16 +35,34 @@ h1 {
 
 h2 {
   font-size: 30px;
-  line-height: normal;
-  font-weight: 400;
+  line-height: 50px;
+  font-weight: 600;
+  margin-top: 20px;
 }
 
 h3 {
   font-size: 20px;
   font-weight: 400;
-  margin: 30px 0 0 0;
+  margin: 30px 0 10px 0;
   color: lighten($base-font-color, 10);
+  padding-left: 8px;
+  background: linear-gradient(to right, darken($section-bg, 5) 20%, $section-bg);
+  line-height: 40px;
+  vertical-align: baseline;
 }
+
+th {
+ font-size: 16px;
+ font-weight: 400;
+ color: lighten($base-font-color, 10);
+}
+
+td {
+  font-size: 15px;
+  font-weight: 300;
+  color: lighten($base-font-color, 20);
+}
+
 a,
 p,
 li {
@@ -48,8 +74,8 @@ li {
   text-decoration: none;
 }
 
-a:hover {
-  color: $hover-color;
+p {
+  padding-left: 8px;
 }
 
 pre {
@@ -72,7 +98,8 @@ pre {
 code {
   font-family: 'Source Code Pro', Courier, monospace;
   font-size: 15px;
-  background-color: #eee;
-  border-radius: 5px;
-  padding: 1px 6px 4px;
+  background-color: #ddd;
+  border-radius: 3px;
+  padding: 3px 5px;
+  vertical-align: baseline;
 }

@@ -12,7 +12,7 @@ $(function() {
         $('#toc').append($('<li>')
         .addClass('toc-item')
         .append($('<a>')
-        .html($(this).text())
+        .html('h2 ' + $(this).text())
         .attr('href', '#'+$(this).text())))
       }
       else {
@@ -20,7 +20,7 @@ $(function() {
           $(lastchild).parent().append($('<li>')
           .addClass('toc-item sub-item')
           .append($('<a>')
-          .html($(this).text().split(':')[0])
+          .html('h3 ' + $(this).text())
           .attr('href', '#'+$(this).text())))
         }
         else {
@@ -28,7 +28,7 @@ $(function() {
           .append($('<li>')
           .addClass('toc-item sub-item')
           .append($('<a>')
-          .html($(this).text().split(':')[0])
+          .html('h3 ' + $(this).text())
           .attr('href', '#'+$(this).text()))))
         }
 
