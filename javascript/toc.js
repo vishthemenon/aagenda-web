@@ -1,38 +1,54 @@
 $(function() {
+  var snum = 1;
+  var mnum = 1;
   $('h2, h3').each(function(){
     if(this.id === ""){
 
       var lastchild = $('#toc li').last()
-      console.log(lastchild.hasClass('sub-item'))
-
-
       this.id = $(this).text()
-
       if(this.tagName == 'H2') {
         $('#toc').append($('<li>')
         .addClass('toc-item')
-        .append($('<a>')
-        .html($(this).text())
-        .attr('href', '#'+$(this).text())))
+        .html(mnum +'. '+ $(this).text())
+        .attr('href', '#'+$(this).text()))
+        $(this).html(mnum +'. '+ $(this).text())
+        mnum ++
       }
       else {
         if(lastchild.hasClass('sub-item')) {
           $(lastchild).parent().append($('<li>')
           .addClass('toc-item sub-item')
-          .append($('<a>')
-          .html($(this).text().split(':')[0])
-          .attr('href', '#'+$(this).text())))
+          .html((mnum-1)+ '.' +snum +'. '+$(this).text().split(':')[0])
+          .attr('href', '#'+$(this).text()))
+          $(this).html((mnum-1)+ '.' +snum +'. '+$(this).text())
         }
         else {
-          $(lastchild).append($('<ol type="a">')
+          snum = 1;
+          $(lastchild).parent()
           .append($('<li>')
           .addClass('toc-item sub-item')
-          .append($('<a>')
-          .html($(this).text().split(':')[0])
-          .attr('href', '#'+$(this).text()))))
+          .html((mnum-1)+ '.' +snum +'. '+$(this).text().split(':')[0])
+          .attr('href', '#'+$(this).text()))
+          $(this).html((mnum-1)+ '.' +snum +'. '+$(this).text())
         }
-
+        snum ++;
       }
     }
+  })
+})
+
+$(function(){
+  // $('img').width = $('img').width/2
+  $('img').each(function() {
+    $(this)[0].width = $(this)[0].width/2
+    console.log($(this)[0].width)
+  })
+  // $('img').height = $('img').height/2
+})
+
+$(function(){
+  $('.toc-item').click(function() {
+    // $(this).hide();
+    window.location.href = $(this).attr('href')
   })
 })
