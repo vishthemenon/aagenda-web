@@ -91,7 +91,7 @@ Deleting an item removes it from view. The deleted item is recoverable for a sho
 ## Restoring Items
 If an item has been accidentally deleted, it is still possible to restore it for a short period of time.
 
-### Restore by id: `/aa restore #<id>`
+### Restore by Id: `/aa restore #<id>`
 Restoring a deleted item by id.
 
 ![/aa restore id](/images/docs/aa-restore.png)
