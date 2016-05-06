@@ -3,7 +3,6 @@ $(function() {
   var mnum = 1;
   $('h2, h3').each(function(){
     if(this.id === ""){
-
       var lastchild = $('#toc li').last()
       this.id = $(this).text()
       if(this.tagName == 'H2') {
@@ -38,17 +37,15 @@ $(function() {
 })
 
 $(function(){
-  // $('img').width = $('img').width/2
   $('img').each(function() {
+    if(document.body.style.zoom == undefined) {
     $(this)[0].width = $(this)[0].width/2
-    console.log($(this)[0].width)
+  }
   })
-  // $('img').height = $('img').height/2
 })
 
 $(function(){
   $('.toc-item').click(function() {
-    // $(this).hide();
     window.location.href = $(this).attr('href')
   })
 })
